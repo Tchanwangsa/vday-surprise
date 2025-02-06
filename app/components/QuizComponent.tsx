@@ -41,8 +41,10 @@ export default function QuizComponent() {
       questions[currentQuestion].answer.toLowerCase()
     ) {
       if (currentQuestion === questions.length - 1) {
-        setQuizCompleted(true);
         setMessage("ALL Correct?? U must be...");
+        setTimeout(() => {
+          setQuizCompleted(true);
+        }, 1500);
       } else {
         setMessage("Correct! Moving to next question...");
         setTimeout(() => {
