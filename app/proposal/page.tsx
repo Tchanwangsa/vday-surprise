@@ -33,6 +33,7 @@ export default function ProposalPage() {
     return () => {
       clearTimeout(firstTextTimeout);
       clearTimeout(secondTextTimeout);
+      clearTimeout(thirdTextTimeout);
       clearTimeout(buttonsTimeout);
     };
   }, []);
