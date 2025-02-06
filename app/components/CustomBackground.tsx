@@ -1,7 +1,11 @@
-import Image from "next/image"
-import type React from "react"
+import Image from "next/image";
+import type React from "react";
 
-export default function CustomBackground({ children }: { children: React.ReactNode }) {
+export default function CustomBackground({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="min-h-screen relative">
       <Image
@@ -15,6 +19,5 @@ export default function CustomBackground({ children }: { children: React.ReactNo
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10">{children}</div>
     </div>
-  )
+  );
 }
-

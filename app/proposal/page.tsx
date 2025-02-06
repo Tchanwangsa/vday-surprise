@@ -1,51 +1,55 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import CustomBackground from "../components/CustomBackground"
-import Image from 'next/image'
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import CustomBackground from "../components/CustomBackground";
+import Image from "next/image";
 
 export default function ProposalPage() {
-  const [noCount, setNoCount] = useState(0)
+  const [noCount, setNoCount] = useState(0);
 
   const handleNoClick = () => {
-    setNoCount((prev) => prev + 1)
-  }
+    setNoCount((prev) => prev + 1);
+  };
 
   const getYesButtonText = () => {
     switch (noCount) {
       case 0:
-        return "Yes"
+        return "Yes";
       case 1:
-        return "YES!!!"
+        return "YES!!!";
       case 2:
-        return "WHAT RLY? YES!"
+        return "WHAT RLY? YES!";
       case 3:
-        return "OMGGG YES??!"
+        return "OMGGG YES??!";
       default:
-        return "I ONLY PRESSED NO FOR FUN :)))\nYES OF COURSE!!"
+        return "I ONLY PRESSED NO FOR FUN :)))\nYES OF COURSE!!";
     }
-  }
+  };
 
   const getNoButtonText = () => {
     switch (noCount) {
       case 1:
-        return "Are you sure??"
+        return "Are you sure??";
       case 2:
-        return "Awwww"
+        return "Awwww";
       case 3:
-        return ":("
+        return ":(";
       default:
-        return "No"
+        return "No";
     }
-  }
+  };
 
   return (
     <CustomBackground>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Soooo its the 14th of Feb??...</h1>
-        <h2 className="text-xl md:text-3xl font-semibold mb-8 text-pink-200">Can I be your Valentines?</h2>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Soooo its the 14th of Feb??...
+        </h1>
+        <h2 className="text-xl md:text-3xl font-semibold mb-8 text-pink-200">
+          Can I be your Valentines?
+        </h2>
 
         {/* Placeholder for GIF */}
         <div className="w-64 h-64 rounded-lg mb-8 flex items-center justify-center">
@@ -85,6 +89,5 @@ export default function ProposalPage() {
         </div>
       </div>
     </CustomBackground>
-  )
+  );
 }
-
