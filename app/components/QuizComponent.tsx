@@ -10,16 +10,17 @@ import Link from "next/link";
 // Define our questions and answers (replace these with your personalized questions)
 const questions = [
   {
-    question: "When in O-Week was our first ever interaction?",
+    question: "When in O-Week was our first ever interaction? 🍻",
     answer: "The Clyde",
   },
   { question: "Whats your favorite way of annoying me?", answer: "Tickling" },
   {
-    question: 'What word starts with "T" that you call me when your angry?',
+    question:
+      'What word starts with "T" that you call me when you\'re angry? 😡😡😡',
     answer: "Turd",
   },
   {
-    question: "What is the name of the jellycat elephant I bought you?",
+    question: "What is the name of the jellycat elephant I got you? 🐘",
     answer: "Josh",
   },
   {
@@ -36,8 +37,9 @@ export default function QuizComponent() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(userAnswer.replace(/’/g, "'").toLowerCase());
     if (
-      userAnswer.toLowerCase() ===
+      userAnswer.replace(/’/g, "'").toLowerCase() ===
       questions[currentQuestion].answer.toLowerCase()
     ) {
       if (currentQuestion === questions.length - 1) {
