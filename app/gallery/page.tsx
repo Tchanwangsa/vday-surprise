@@ -51,8 +51,8 @@ export default function GalleryPage() {
           THX FOR BEING MY VALENTINES ❤️
         </h1>
         <p className="text-xl mb-2 text-pink-200">
-          I know these aren't great photos but here are some goofy photos you
-          might've forgotten about
+          I know these aren&apos;t great photos but here are some goofy photos
+          you might&apos;ve forgotten about
         </p>
         <p className="text-xl mb-4 text-pink-200">
           I miss you so much and can&apos;t wait to see u soon. Don&apos;t
