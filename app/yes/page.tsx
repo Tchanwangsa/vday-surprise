@@ -17,11 +17,19 @@ export default function YesPage() {
     });
   }, []);
 
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    if (tapCount >= 50) {
+      timeout = setTimeout(() => {
+        router.push("/gallery");
+      }, 5000);
+    }
+    return () => clearTimeout(timeout);
+  }, [tapCount, router]);
+
   const handleTap = () => {
     if (tapCount < 49) {
       setTapCount(tapCount + 1);
-    } else {
-      router.push("/gallery");
     }
   };
 
@@ -30,7 +38,8 @@ export default function YesPage() {
     if (tapCount < 20) return "Long way to goooo";
     if (tapCount < 30) return "Almost there";
     if (tapCount < 40) return "Just joking hehe KEEP GOINGG";
-    return `${50 - tapCount} left`;
+    if (tapCount < 50) return `${50 - tapCount} left`;
+    return "SURPRISE LOADING.....";
   };
 
   return (

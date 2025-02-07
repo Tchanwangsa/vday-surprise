@@ -17,6 +17,12 @@ const images = [
   "/gallery/gallery-8.jpg",
   "/gallery/gallery-9.jpg",
   "/gallery/gallery-10.jpg",
+  "/gallery/gallery-11.jpg",
+  "/gallery/gallery-12.jpg",
+  "/gallery/gallery-13.jpg",
+  "/gallery/gallery-14.jpg",
+  "/gallery/gallery-15.jpg",
+  "/gallery/gallery-end.jpg",
 ];
 
 export default function GalleryPage() {

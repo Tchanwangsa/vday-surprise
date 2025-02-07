@@ -23,7 +23,7 @@ export default function SurprisePage() {
         onClick={handleTap}
       >
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-          A Special Surprise Awaits!
+          I&apos;ve got a Special Surprise!
         </h1>
         <p className="text-xl mb-4 text-pink-200">
           Tap the screen {10 - tapCount} more times to reveal your surprise!
