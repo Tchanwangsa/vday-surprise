@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import CustomBackground from "../components/CustomBackground";
+import confetti from "canvas-confetti";
 
 // You'll need to replace these with your actual image URLs
 const images = [
@@ -21,12 +22,19 @@ const images = [
   "/gallery/gallery-12.jpg",
   "/gallery/gallery-13.jpg",
   "/gallery/gallery-14.jpg",
-  "/gallery/gallery-15.jpg",
   "/gallery/gallery-end.jpg",
 ];
 
 export default function GalleryPage() {
   const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  }, []);
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
@@ -42,6 +50,10 @@ export default function GalleryPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
           THX FOR BEING MY VALENTINES ❤️
         </h1>
+        <p className="text-xl mb-2 text-pink-200">
+          I know these aren't great photos but here are some goofy photos you
+          might've forgotten about
+        </p>
         <p className="text-xl mb-4 text-pink-200">
           I miss you so much and can&apos;t wait to see u soon. Don&apos;t
           forget to scroll to the end for a surprise.
@@ -59,15 +71,15 @@ export default function GalleryPage() {
             <Button
               onClick={prevImage}
               variant="outline"
-              className="bg-gray-300 hover:bg-white transition-colors"
+              className="bg-gray-300 hover:bg-white transition-colors text-xs md:text-sm"
             >
               Previous
             </Button>
-            <div className="flex space-x-2">
+            <div className="flex space-x-1 md:space-x-2 mx-1">
               {images.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-2 h-2 rounded-full ${
+                  className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
                     index === currentImage ? "bg-black" : "bg-gray-300"
                   }`}
                 />
@@ -76,10 +88,15 @@ export default function GalleryPage() {
             <Button
               onClick={nextImage}
               variant="outline"
-              className="bg-gray-300 hover:bg-white transition-colors"
+              className="bg-gray-300 hover:bg-white transition-colors text-xs md:text-sm"
             >
               Next
             </Button>
+          </div>
+          <div className="flex justify-center items-center">
+            <p className="text-center">
+              {currentImage + 1}/{images.length}{" "}
+            </p>
           </div>
         </div>
       </div>

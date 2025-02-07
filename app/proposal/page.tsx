@@ -80,12 +80,12 @@ export default function ProposalPage() {
         )}
         {showSecondText && (
           <h2 className="text-xl md:text-3xl font-semibold text-pink-200 fade-in">
-            Can I be your......
+            Can I......
           </h2>
         )}
         {showThirdText && (
           <h2 className="text-xl md:text-3xl font-semibold mb-4 text-pink-200 fade-in">
-            Valentines? 😊😊😊
+            Be your Valentines? 😊😊😊
           </h2>
         )}
 

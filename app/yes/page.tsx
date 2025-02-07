@@ -22,15 +22,13 @@ export default function YesPage() {
     if (tapCount >= 50) {
       timeout = setTimeout(() => {
         router.push("/gallery");
-      }, 5000);
+      }, 3000);
     }
     return () => clearTimeout(timeout);
   }, [tapCount, router]);
 
   const handleTap = () => {
-    if (tapCount < 49) {
-      setTapCount(tapCount + 1);
-    }
+    setTapCount(tapCount + 1);
   };
 
   const getTapMessage = () => {
@@ -49,11 +47,11 @@ export default function YesPage() {
         onClick={handleTap}
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          Yay! Happy Valentine&apos;s Day Bon Bon! ❤️
+          Yay!!!!! ❤️
         </h1>
         <p className="text-xl text-pink-200 mb-8">
-          Awwww you said yes??? I don&apos;t believe it!! text me saying
-          &quot;YAY! Happy VDAY&quot; if you&apos;ve reached this stage.
+          Awwww you said yes??? I don&apos;t believe it!! I can&apos;t be there
+          to do this in person but I wish I could!!
         </p>
 
         <p className="text-xl mb-4 text-pink-200">

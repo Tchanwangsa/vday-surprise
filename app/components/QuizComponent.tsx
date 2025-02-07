@@ -5,10 +5,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
 import Link from "next/link";
 
 // Define our questions and answers (replace these with your personalized questions)
 const questions = [
+  {
+    question: "What is the name of the jellycat elephant I got you? 🐘",
+    answer: "Josh",
+  },
   {
     question: "When in O-Week was our first ever interaction? 🍻",
     answer: "The Clyde",
@@ -18,10 +23,6 @@ const questions = [
     question:
       'What word starts with "T" that you call me when you\'re angry? 😡😡😡',
     answer: "Turd",
-  },
-  {
-    question: "What is the name of the jellycat elephant I got you? 🐘",
-    answer: "Josh",
   },
   {
     question: "What is your favourite song that I introduced you to?",
@@ -87,8 +88,17 @@ export default function QuizComponent() {
         </form>
       ) : (
         <div className="text-center space-y-2">
-          <h3 className="text-lg">{message}</h3>
-          <p className="text-2xl font-bold"> BONNIEEE!??</p>
+          {/* <h3 className="text-lg">{message}</h3> */}
+          <p className="text-2xl font-bold"> Is this you???</p>
+          <div className="w-64 h-64 rounded-lg mb-8 flex items-center justify-center mx-auto">
+            <Image
+              src="/bonnie.jpg"
+              alt="Bonnie??"
+              width={110}
+              height={64}
+              className="rounded-lg object-cover"
+            />
+          </div>
           <Link href="/surprise">
             <Button className="my-2 w-full bg-red-500 hover:bg-red-600 text-white">
               YEPP THATS MEEE
