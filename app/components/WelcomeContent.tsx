@@ -5,7 +5,7 @@ export default function WelcomeContent() {
         Hmmm... are you the right person??
       </h1>
       <h2 className="text-xl md:text-2xl text-pink-700">
-        Answer these questions to to prove if you are!
+        Answer these questions to prove if you are!
       </h2>
     </div>
   );

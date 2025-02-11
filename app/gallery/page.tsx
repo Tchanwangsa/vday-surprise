@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import CustomBackground from "../components/CustomBackground";
 import confetti from "canvas-confetti";
+import Countdown from "../components/Countdown";
 
 // You'll need to replace these with your actual image URLs
 const images = [
@@ -27,6 +28,7 @@ const images = [
 
 export default function GalleryPage() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [showCountdown, setShowCountdown] = useState(false);
 
   useEffect(() => {
     confetti({
@@ -36,27 +38,48 @@ export default function GalleryPage() {
     });
   }, []);
 
+  useEffect(() => {
+    if (showCountdown) {
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    }
+  }, [showCountdown]);
+
   const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
+    setCurrentImage((prev) => {
+      const nextIndex = (prev + 1) % images.length;
+      if (nextIndex === images.length - 1) {
+        setShowCountdown(true);
+      }
+      return nextIndex;
+    });
   };
 
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const targetDate = "2025-02-16T20:20:00Z";
+
   return (
     <CustomBackground>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          THX FOR BEING MY VALENTINES ❤️
+          YAYYY HAPPY VALENTINES ❤️
         </h1>
         <p className="text-xl mb-2 text-pink-200">
-          I know these aren&apos;t great photos but here are some goofy photos
-          you might&apos;ve forgotten about
+          Thanks to Eva here are some goofy photos you might&apos;ve forgotten
+          about!!
+        </p>
+        <p className="text-xl mb-2 text-pink-200">
+          I miss you so much and can&apos;t wait to see u soon.
         </p>
         <p className="text-xl mb-4 text-pink-200">
-          I miss you so much and can&apos;t wait to see u soon. Don&apos;t
-          forget to scroll to the end for a surprise.
+          I hope you&apos;ve liked and enjoyed it!!!! I enjoyed every minute of
+          making this.
         </p>
         <div className="w-full max-w-md">
           <div className="relative aspect-square mb-4 shadow-xl border-4 border-white rounded-lg">
@@ -99,6 +122,7 @@ export default function GalleryPage() {
             </p>
           </div>
         </div>
+        {showCountdown && <Countdown targetDate={targetDate} />}
       </div>
     </CustomBackground>
   );
