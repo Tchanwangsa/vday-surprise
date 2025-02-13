@@ -21,7 +21,7 @@ export default function YesPage() {
           Yay!!!!! HAPPY VALENTINES?! ❤️
         </h1>
         <p className="text-xl text-pink-200 mb-4">
-          Awwww well I didn't give u a choice, but I guess you said yes!!
+          Awwww well I didn&apos;t give u a choice, but I guess you said yes!!
         </p>
         <p className="text-xl mb-2 text-pink-200">
           If I ever asked myself from the first time we met we&apos;d be where
@@ -29,7 +29,7 @@ export default function YesPage() {
           wouldn&apos;t have either.
         </p>
         <p className="text-xl mb-2 text-pink-200">
-          But it's all been a pleasant surprise. Being with you makes me so
+          But it&apos;s all been a pleasant surprise. Being with you makes me so
           happy I can&apos;t wait to see you again. You&apos;ve become very
           special to me and I MEAN IT!
         </p>

@@ -49,6 +49,7 @@ export default function ProposalPage() {
       clearTimeout(firstTextTimeout);
       clearTimeout(secondTextTimeout);
       clearTimeout(thirdTextTimeout);
+      clearTimeout(forthTextTimeout);
       clearTimeout(fifthTextTimeout);
       clearTimeout(buttonsTimeout);
       clearTimeout(photoTimeout);
