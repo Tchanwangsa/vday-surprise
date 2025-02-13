@@ -18,15 +18,16 @@ export default function YesPage() {
     <CustomBackground>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          Yay!!!!! HAPPY VALENTINES?! ❤️
+          Yay!!!!! ❤️
         </h1>
         <p className="text-xl text-pink-200 mb-4">
           Awwww well I didn&apos;t give u a choice, but I guess you said yes!!
         </p>
         <p className="text-xl mb-2 text-pink-200">
-          If I ever asked myself from the first time we met we&apos;d be where
-          we are rn, I wouldn&apos;t believe it and I&apos;m sure you
-          wouldn&apos;t have either.
+          It's still scary but also crazy to me where we are. If I ever asked
+          myself from the first time we met if we&apos;d be where we are rn, I
+          wouldn&apos;t believe it and I&apos;m sure you wouldn&apos;t have
+          either.
         </p>
         <p className="text-xl mb-2 text-pink-200">
           But it&apos;s all been a pleasant surprise. Being with you makes me so
@@ -34,8 +35,9 @@ export default function YesPage() {
           special to me and I MEAN IT!
         </p>
         <p className="text-xl mb-2 text-pink-200">
-          Did you rly rly genuinely mean it??? I don&apos;t believe it!! If you
-          rly mean it then send me a nice msg to show it!
+          Btw did you rly rly genuinely mean to press yes??? I don&apos;t
+          believe it!! If you rly mean it then send me a nice msg to show it
+          hehehe.
         </p>
 
         <div className="rounded-lg flex items-center justify-center fade-in">

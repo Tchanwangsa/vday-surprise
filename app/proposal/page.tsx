@@ -23,27 +23,27 @@ export default function ProposalPage() {
 
     const secondTextTimeout = setTimeout(() => {
       setShowSecondText(true);
-    }, 3000);
+    }, 5000);
 
     const thirdTextTimeout = setTimeout(() => {
       setShowThirdText(true);
-    }, 6000);
+    }, 8000);
 
     const forthTextTimeout = setTimeout(() => {
       setShowForthText(true);
-    }, 8000);
+    }, 11000);
 
     const fifthTextTimeout = setTimeout(() => {
       setShowFifthText(true);
-    }, 11000);
+    }, 14000);
 
     const photoTimeout = setTimeout(() => {
       setShowPhoto(true);
-    }, 12000);
+    }, 16000);
 
     const buttonsTimeout = setTimeout(() => {
       setShowButtons(true);
-    }, 13000);
+    }, 18000);
 
     return () => {
       clearTimeout(firstTextTimeout);
@@ -92,8 +92,8 @@ export default function ProposalPage() {
     <CustomBackground>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
         {showFirstText && (
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white fade-in">
-            Today&apos;s the 14th of Feb??...
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white fade-in">
+            Soooo hope you know today&apos;s the 14th of Feb??...
           </h1>
         )}
         {showSecondText && (

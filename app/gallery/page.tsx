@@ -73,7 +73,7 @@ export default function GalleryPage() {
         </h1>
         <p className="text-xl mb-2 text-pink-200">
           A secret source gave me some goofy photos of us u might&apos;ve
-          forgotten about!!
+          forgotten about!! Here's some memories and cheers to many more TGT!
         </p>
         <p className="text-xl mb-2 text-pink-200">
           I miss you so much and can&apos;t wait to see u soon. Make sure you
