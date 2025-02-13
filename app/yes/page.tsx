@@ -24,10 +24,10 @@ export default function YesPage() {
           Awwww well I didn&apos;t give u a choice, but I guess you said yes!!
         </p>
         <p className="text-xl mb-2 text-pink-200">
-          It's still scary but also crazy to me where we are. If I ever asked
-          myself from the first time we met if we&apos;d be where we are rn, I
-          wouldn&apos;t believe it and I&apos;m sure you wouldn&apos;t have
-          either.
+          It&apos;s still scary but also crazy to me where we are. If I ever
+          asked myself from the first time we met if we&apos;d be where we are
+          rn, I wouldn&apos;t believe it and I&apos;m sure you wouldn&apos;t
+          have either.
         </p>
         <p className="text-xl mb-2 text-pink-200">
           But it&apos;s all been a pleasant surprise. Being with you makes me so

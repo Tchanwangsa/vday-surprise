@@ -8,7 +8,6 @@ import confetti from "canvas-confetti";
 import Countdown from "../components/Countdown";
 import Link from "next/link";
 
-// You'll need to replace these with your actual image URLs
 const images = [
   "/gallery/gallery-1.jpg",
   "/gallery/gallery-2.jpg",
@@ -73,7 +72,8 @@ export default function GalleryPage() {
         </h1>
         <p className="text-xl mb-2 text-pink-200">
           A secret source gave me some goofy photos of us u might&apos;ve
-          forgotten about!! Here's some memories and cheers to many more TGT!
+          forgotten about!! Here&apos;s some memories and cheers to many more
+          TGT!
         </p>
         <p className="text-xl mb-2 text-pink-200">
           I miss you so much and can&apos;t wait to see u soon. Make sure you
