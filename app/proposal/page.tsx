@@ -12,6 +12,7 @@ export default function ProposalPage() {
   const [showSecondText, setShowSecondText] = useState(false);
   const [showThirdText, setShowThirdText] = useState(false);
   const [showForthText, setShowForthText] = useState(false);
+  const [showFifthText, setShowFifthText] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
   const [showPhoto, setShowPhoto] = useState(false);
 
@@ -30,21 +31,25 @@ export default function ProposalPage() {
 
     const forthTextTimeout = setTimeout(() => {
       setShowForthText(true);
-    }, 9000);
+    }, 8000);
+
+    const fifthTextTimeout = setTimeout(() => {
+      setShowFifthText(true);
+    }, 11000);
 
     const photoTimeout = setTimeout(() => {
       setShowPhoto(true);
-    }, 10000);
+    }, 12000);
 
     const buttonsTimeout = setTimeout(() => {
       setShowButtons(true);
-    }, 11000);
+    }, 13000);
 
     return () => {
       clearTimeout(firstTextTimeout);
       clearTimeout(secondTextTimeout);
       clearTimeout(thirdTextTimeout);
-      clearTimeout(forthTextTimeout);
+      clearTimeout(fifthTextTimeout);
       clearTimeout(buttonsTimeout);
       clearTimeout(photoTimeout);
     };
@@ -92,15 +97,20 @@ export default function ProposalPage() {
         )}
         {showSecondText && (
           <h2 className="text-xl md:text-3xl font-semibold text-pink-200 fade-in">
-            Sooo does that mean....
+            I think you know whats coming....
           </h2>
         )}
         {showThirdText && (
           <h2 className="text-xl md:text-3xl font-semibold text-pink-200 fade-in">
-            I can be your....
+            What would u say if.....
           </h2>
         )}
         {showForthText && (
+          <h2 className="text-xl md:text-3xl font-semibold text-pink-200 fade-in">
+            I asked to be your.....
+          </h2>
+        )}
+        {showFifthText && (
           <h2 className="text-xl md:text-3xl font-semibold mb-4 text-pink-200 fade-in">
             Valentines? 😊😊😊
           </h2>

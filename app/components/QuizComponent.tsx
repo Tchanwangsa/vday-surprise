@@ -89,7 +89,7 @@ export default function QuizComponent() {
       ) : (
         <div className="text-center space-y-2">
           {/* <h3 className="text-lg">{message}</h3> */}
-          <p className="text-2xl font-bold"> Is this you???</p>
+          <p className="text-2xl font-bold"> All correct?? Is this you???</p>
           <div className="w-64 h-64 rounded-lg mb-8 flex items-center justify-center mx-auto">
             <Image
               src="/bonnie.jpg"

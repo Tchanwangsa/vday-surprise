@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import CustomBackground from "../components/CustomBackground";
 import confetti from "canvas-confetti";
 import Countdown from "../components/Countdown";
+import Link from "next/link";
 
 // You'll need to replace these with your actual image URLs
 const images = [
@@ -68,18 +69,15 @@ export default function GalleryPage() {
     <CustomBackground>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          YAYYY HAPPY VALENTINES ❤️
+          SURPRISE!! 🥳🥳
         </h1>
         <p className="text-xl mb-2 text-pink-200">
-          Thanks to Eva here are some goofy photos you might&apos;ve forgotten
-          about!!
+          A secret source gave me some goofy photos of us u might&apos;ve
+          forgotten about!!
         </p>
         <p className="text-xl mb-2 text-pink-200">
-          I miss you so much and can&apos;t wait to see u soon.
-        </p>
-        <p className="text-xl mb-4 text-pink-200">
-          I hope you&apos;ve liked and enjoyed it!!!! I enjoyed every minute of
-          making this.
+          I miss you so much and can&apos;t wait to see u soon. Make sure you
+          scroll to the end!!
         </p>
         <div className="w-full max-w-md">
           <div className="relative aspect-square mb-4 shadow-xl border-4 border-white rounded-lg">
@@ -122,7 +120,16 @@ export default function GalleryPage() {
             </p>
           </div>
         </div>
-        {showCountdown && <Countdown targetDate={targetDate} />}
+        {showCountdown && (
+          <>
+            <Countdown targetDate={targetDate} />
+            <Link href="/finalsurprise">
+              <Button className="w-full bg-red-500 hover:bg-red-600 text-white">
+                CLICK ME!
+              </Button>
+            </Link>
+          </>
+        )}
       </div>
     </CustomBackground>
   );

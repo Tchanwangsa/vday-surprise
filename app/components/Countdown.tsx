@@ -55,7 +55,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }
 
   return (
-    <div className="text-center mb-4 p-2 fade-in">
+    <div className="text-center mb-2 p-2 fade-in">
       <div className="flex flex-wrap justify-center items-center gap-2 text-white">
         <div className="flex flex-col items-center">
           <span className="text-xl md:text-2xl font-bold">{timeLeft.days}</span>

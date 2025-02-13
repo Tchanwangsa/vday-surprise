@@ -1,63 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import confetti from "canvas-confetti";
-import { useRouter } from "next/navigation";
 import CustomBackground from "../components/CustomBackground";
+import Image from "next/image";
 
 export default function YesPage() {
-  const [tapCount, setTapCount] = useState(0);
-  const router = useRouter();
-
   useEffect(() => {
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
     });
-  }, []);
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (tapCount >= 50) {
-      timeout = setTimeout(() => {
-        router.push("/gallery");
-      }, 3000);
-    }
-    return () => clearTimeout(timeout);
-  }, [tapCount, router]);
-
-  const handleTap = () => {
-    setTapCount(tapCount + 1);
-  };
-
-  const getTapMessage = () => {
-    if (tapCount < 10) return "Start tapping!";
-    if (tapCount < 20) return "Long way to goooo";
-    if (tapCount < 30) return "Almost there";
-    if (tapCount < 40) return "Just joking hehe KEEP GOINGG";
-    if (tapCount < 50) return `${50 - tapCount} left`;
-    return "SURPRISE LOADING.....";
-  };
+  });
 
   return (
     <CustomBackground>
-      <div
-        className="min-h-screen flex flex-col items-center justify-center p-4 text-center"
-        onClick={handleTap}
-      >
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          Yay!!!!! ❤️
+          Yay!!!!! HAPPY VALENTINES?! ❤️
         </h1>
-        <p className="text-xl text-pink-200 mb-8">
-          Awwww you said yes??? I don&apos;t believe it!! I can&apos;t be there
-          to do this in person but I wish I could!!
+        <p className="text-xl text-pink-200 mb-4">
+          Awwww well I didn't give u a choice, but I guess you said yes!!
+        </p>
+        <p className="text-xl mb-2 text-pink-200">
+          If I ever asked myself from the first time we met we&apos;d be where
+          we are rn, I wouldn&apos;t believe it and I&apos;m sure you
+          wouldn&apos;t have either.
+        </p>
+        <p className="text-xl mb-2 text-pink-200">
+          But it's all been a pleasant surprise. Being with you makes me so
+          happy I can&apos;t wait to see you again. You&apos;ve become very
+          special to me and I MEAN IT!
+        </p>
+        <p className="text-xl mb-2 text-pink-200">
+          Did you rly rly genuinely mean it??? I don&apos;t believe it!! If you
+          rly mean it then send me a nice msg to show it!
         </p>
 
-        <p className="text-xl mb-4 text-pink-200">
-          TAP TAP TAP! FOR FINAL SURPRISE
-        </p>
-        <p className="text-2xl font-bold text-white">{getTapMessage()}</p>
+        <div className="rounded-lg flex items-center justify-center fade-in">
+          <Image
+            src="/love-fart.gif"
+            alt="HEHE!"
+            width={206}
+            height={160}
+            className="rounded-lg object-cover"
+          />
+        </div>
       </div>
     </CustomBackground>
   );
